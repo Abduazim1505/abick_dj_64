@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+
+{% for item in salon %}
+
+<div>
+  <p>{{item.title}}</p>
+  <p>{{item.context}}</p>
+  <p>{{item.created_at}}</p>
+</div>
+
+<hr>
+
+{% endfor %}}
+
+</body>
+</html>
