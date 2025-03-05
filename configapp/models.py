@@ -9,6 +9,11 @@ class AutoSalon(models.Model):
     def __str__(self):
         return f"{self.title} {self.context}"
 
+    class Meta:
+        verbose_name = "SALON"
+        verbose_name_plural = "SALONS"
+        ordering = ['pk']
+
 class Car(models.Model):
     model = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -16,3 +21,8 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.model} {self.price} ({self.year})"
+
+    class Meta:
+        verbose_name = "CAR"
+        verbose_name_plural = "CARS"
+        ordering = ['pk']
